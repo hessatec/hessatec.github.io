@@ -41,3 +41,28 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+services-container li {
+    font-size: 100px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;     
+}
+
+.card {
+    padding: .5rem;
+}
+
+.icon-text {
+    text-align: center;
+    font-family: 'Helvetica';
+    font-size: large;
+}
+
+.credits {
+    font-size: 10px;
+}
