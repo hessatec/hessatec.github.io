@@ -1,6 +1,10 @@
+
 .services-list {
- font-size: 20px; 
+ font-size: 40px; 
  font-family: Helvetica; 
+}
+
+dt {
  padding: 10px; 
 }
 
