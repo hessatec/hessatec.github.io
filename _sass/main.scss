@@ -48,13 +48,31 @@ services-container li {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: 1rem;     
+    grid-template-columns: 0.33fr auto 0.33fr;
+    // grid-auto-rows: 25vh 25vh 25vh;
+    grid-auto-rows: auto;    
 }
 
 .card {
-    padding: .5rem;
+    grid-column-start: 2;
+}
+
+.item-a {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.item-b {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.item-c {
+    grid-row-start: 3;
+}
+
+.center-justified {
+    text-align: center;
 }
 
 .icon-text {
@@ -65,4 +83,8 @@ services-container li {
 
 .credits {
     font-size: 5px;
+}
+
+.icon-text p {
+    font-size: inherit;
 }
