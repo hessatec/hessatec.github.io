@@ -11,11 +11,11 @@ Sai is a bit more of an expert at using Synapse Analytics than I am, but like ma
 
 To begin, I created a new resource group on the [Azure portal](portal.azure.com), and then within it, provisioned an Azure Synapse Analytics instance. In doing so, there are several settings that I found were important to clarify: 
 
-![Entering workspace details](/assets/images/synapse-blog/creating_synapse_ws.png "Synapse provisioning")
+![Providing details in Azure portal to create an Azure Synapse workspace.](/assets/images/synapse-blog/creating_synapse_ws.png "Synapse provisioning"){: .images-center-justified}
 
 Under the Basics tab, we need to specify the subscription, resource group, which are boilerplate. We also need to specify the workspace name, the region, the name of the data lake we will be storing our training and testing datasets in. This is very important, I will find out soon!
 
-![Entering workspace details](/assets/images/synapse-blog/creating_synapse_admin_pw.png "Synapse provisioning")
+![Providing an Azure Synapse SQL Admin Password in Azure Portal.](/assets/images/synapse-blog/creating_synapse_admin_pw.png "SQL Admin PW"){: .images-center-justified}
 
 Now, under the Security tab, we also need to specify a SQL admin password which is also another important detail - and when I running through a tutorial of Synapse, I managed to forget. Don't do this - Azure doesn't have a great way to recover passwords or change them within a Synapse workspace so make sure to remember your password or you won't be able to edit any configurations. 
 
