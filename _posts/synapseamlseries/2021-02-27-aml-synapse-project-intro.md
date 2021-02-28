@@ -1,7 +1,8 @@
 ---
 layout: post
 title: AML and Azure Synapse Project Introduction (Part 1)
-author: Siri & Sai
+author: Siri
+tags: ML Synapse Azure
 ---
 
 2021 has already been an eventful year for a number of reasons. One of those reasons is the market fluctuations that have come about as a result of the Reddit Gamestop saga in which we saw the price of $GME skyrocket in a bid to play hedge funds and the practice of short selling, which bets on the price of a certain stock falling. 
