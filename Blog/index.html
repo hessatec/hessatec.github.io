@@ -142,18 +142,18 @@
                     There are no posts under your search criteria
                 </div>
                 <div ng-repeat="p in PostsToShow | orderBy:'-PostedOn'" class="col-12 blog-post-content border-all border-color-medium-gray border-radius-6px overflow-hidden text-center p-0 margin-4-half-rem-bottom wow animate__fadeIn">
-                    <div class="blog-image"><a href="Post/%7b%7bp.html"><img ng-src="/img/BlogImages/{{p.Image}}" alt="{{p.Title}}" /></a></div>
+                    <div class="blog-image"><a href="Post/{{p.Id}}.html"><img ng-src="/img/BlogImages/{{p.Image}}" alt="{{p.Title}}" /></a></div>
                     <div class="blog-text d-inline-block w-100">
                         <div class="content padding-5-half-rem-all lg-padding-4-half-rem-all xs-padding-20px-lr xs-padding-40px-tb position-relative mx-auto w-90 lg-w-100">
                             <div class="blog-details-overlap text-small font-weight-500 bg-green border-radius-4px alt-font text-white text-uppercase">
-                                <a href="#" class="text-white">{{p.PostedOnDate}} </a> <span class="margin-5px-lr">•</span> <a href="Post/%7b%7bp.html" class="text-white">{{p.CategoryName}}</a>
+                                <a href="#" class="text-white">{{p.PostedOnDate}} </a> <span class="margin-5px-lr">•</span> <a href="Post/{{p.Id}}.html" class="text-white">{{p.CategoryName}}</a>
                             </div>
-                            <h6 class="alt-font font-weight-500"><a href="Post/%7b%7bp.html" class="text-extra-dark-gray text-fast-blue-hover">{{p.Title}}</a></h6>
+                            <h6 class="alt-font font-weight-500"><a href="Post/{{p.Id}}.html" class="text-extra-dark-gray text-fast-blue-hover">{{p.Title}}</a></h6>
                             <p>
                                 {{p.Excerpt}}
                             </p>
 
-                            <a href="Post/%7b%7bp.html" class="btn btn-small btn-transparent-dark-gray btn-round-edge btn-slide-up-bg margin-10px-top">Continue Reading <span class="bg-extra-dark-gray"></span></a>
+                            <a href="Post/{{p.Id}}.html" class="btn btn-small btn-transparent-dark-gray btn-round-edge btn-slide-up-bg margin-10px-top">Continue Reading <span class="bg-extra-dark-gray"></span></a>
                         </div>
                     </div>
                 </div>
