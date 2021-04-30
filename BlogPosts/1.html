@@ -1,0 +1,58 @@
+
+<p>Hello everyone. At Microsoft Ignite, the Microsoft team provided significant information about Microsoft Mesh, a Mixed Reality platform that aims to power immersive applications that allow users to collaborate from a multitude of devices, including virtual reality headsets, desktops, and mobile devices. As a developer using the Microsoft platform who has some experience building simulations with the Unity game engine, I wanted to learn more about what Mesh has to offer.</p>
+
+<h2 id="the-tenets-of-mesh">The Tenets of Mesh</h2>
+
+<p>Before discussing the features that Mesh offers for developers, we need to establish some fundamental concepts. In a <a href="https://www.youtube.com/watch?v=lhKn9mjy_QM">demo shown on Microsoft Mechanics</a>, Simon Skaria mentions that experiences in Microsoft Mesh are built around <em>spaces</em>. Spaces implement the four core areas that Mesh aims to revolutionize.</p>
+
+<p>The first tenet of Microsoft Mesh is <em>presence</em>. Presence provides offerings in the spectrum between realism and reach. Basically, it allows users to represent themselves in the immersive environment through holoportation or as avatars (which the user can provide). Look at this image from the <a href="https://www.youtube.com/watch?v=HZkL-A2i_LM">Microsoft Ignite session about Mesh</a>.</p>
+
+<p><img src="/assets/images/mesh-post/individual-representation.png" alt="This image demonstrates the presence offerings available to Mesh customers." title="Presence offerings in Mesh" class="images-center-justified" /></p>
+
+<p>Second, Microsoft explains that Mesh can be used to enhance environments with holographic presentations, like enhancing a view of a city with holographic markers. <em>Spatial maps</em> enable this by aligning visual enhancements with physical objects and allow users of multiple devices to see these markings.</p>
+
+<p>Third, Mesh provides <em>holographic rendering</em>. In the Ignite session, Skaria demonstrates how drone images of a bridge can be reconstructed to enable inspectors to verify its integrity. Rendering takes place on the Edge or in the cloud. This flexibility allows users to collaborate on high-poly 3D models without being impacted by the compute capabilities of their hardware. For industrial customers, Mesh’s rendering capabilities are compatible with a variety of industry formats spanning software made by Autodesk, Siemens, Dassault Systems, and more.</p>
+
+<p><img src="/assets/images/mesh-post/rendering-bridge.png" alt="This image demonstrates a rendering of a bridge for a safety inspection scenario." title="Rendering a bridge through Mesh" class="images-center-justified" /></p>
+
+<p>Lastly, Microsoft has implemented <em>multi-user sync</em>, which enables users across different platforms to observe user actions within 100ms latency, irrespective of their geographic location. The image below is particularly fascinating because it shows how users of native 2D and 3D devices can engage over the Mesh platform. Multi-user sync also supports spatial audio to further enhance immersion.</p>
+
+<p><img src="/assets/images/mesh-post/multiuser-sync.png" alt="This image demonstrates how users of 2D and 3D devices can collaborate and see live updates to the environment." title="Live updates in Mesh space" class="images-center-justified" /></p>
+
+<h2 id="how-can-developers-get-started">How can developers get started?</h2>
+
+<p>Microsoft Mesh offers to solve the fundamental problems of Mixed Reality that prevent businesses from adopting MR solutions. However, the Mesh ecosystem needs to be accessible to developers. Luckily, I believe that Microsoft is poised to help developers deliver on the promise of MR.</p>
+
+<p>First off, Mesh is based on the Azure platform. This means that Microsoft’s identity solutions, including Azure Active Directory, support MR applications that meet corporate security standards. Compatibility with Microsoft Graph means <a href="https://developer.microsoft.com/en-us/microsoft-365/blogs/microsoft-graph-mailbag-intro-to-microsoft-graph-and-top-5-api-requests/">integration with Microsoft 365 and the insights it offers.</a></p>
+
+<p>During the Microsoft Ignite session, Dorrene Brown shows how to build a Microsoft Mesh-enabled application using the Unity SDK. In summary, here’s the steps followed:</p>
+
+<blockquote>
+    <ul>
+        <li>Enable Mesh-based applications in the Azure Active Directory tenant and allow them to use Microsoft Graph APIs and Mixed Reality services</li>
+    </ul>
+</blockquote>
+
+<blockquote>
+    <ul>
+        <li>Add the Microsoft Mesh SDK to your Unity application and use the included Unity prefabs in your app</li>
+    </ul>
+</blockquote>
+
+<blockquote>
+    <ul>
+        <li>Use the included Unity tooling, including the Microsoft Mesh editor window, to authenticate the application with Azure and manage Mesh sessions</li>
+    </ul>
+</blockquote>
+
+<blockquote>
+    <ul>
+        <li>Import a 3D model from OneDrive to render in the environment</li>
+    </ul>
+</blockquote>
+
+<p>While these steps seem simple, it doesn’t look like the Unity SDK is publicly available yet. However, I will update this post when it is.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Today, I’ve just given a high-level overview of Mesh. I look forward to building some basic applications using Microsoft Mesh as the service becomes available. For now, I would recommend <a href="https://info.microsoft.com/CO-NOGEP-CNTNT-FY21-03Mar-02-Microsoft-Mesh-5890_01Registration-ForminBody.html">subscribing to Microsoft Mesh updates.</a> In addition, the <a href="https://docs.microsoft.com/en-us/mesh/">Mesh documentation</a> provides a good starting point, though there’s little information on the client SDKs.</p>
