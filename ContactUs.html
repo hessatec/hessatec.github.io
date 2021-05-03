@@ -1,4 +1,4 @@
-
+﻿
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -184,7 +184,7 @@
                         <h4 class="alt-font font-weight-600 text-extra-dark-gray">Get in touch with us </h4>
                     </div>
                     <div class="col-12">
-                        <form action="https://formspree.io/f/mdopqkvr" method="post" target="_blank">
+                        <form action="https://formspree.io/f/mdopqkvr" method="post" id="contactForm">
                             <div class="row">
                                 <div class="col-md-4">
                                     <p>Feel free to reach out to us about any technology challenges your company faces, or even if you simply want to discuss a technology with us and see how it can fit into your business. Or simply let us know what you think about the content on our site!</p>
@@ -197,7 +197,7 @@
                                         <input class="medium-input bg-white margin-10px-bottom required" type="text" name="subject" placeholder="Subject">
                                         <textarea class="medium-textarea h-200px bg-white margin-10px-bottom required" name="comment" placeholder="Your message"></textarea>
                                         <div class="g-recaptcha" data-sitekey="6Ld5IQgUAAAAAGhx3rqR4-mi8Mw_QU8Iquns7Jtt"></div>
-                                        <button class="btn btn-medium btn-green mb-0 mt-3 submit" type="submit">Send Message</button>
+                                        <button class="btn btn-medium btn-green mb-0 mt-3 submit" onclick="$('#contactForm').submit();" type="submit">Send Message</button>
                                     </div>
 
                                 </div>
@@ -282,7 +282,7 @@
     
 
     
-    <script src="../www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 </body>
