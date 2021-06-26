@@ -7,7 +7,6 @@
     , new Tag({ Id: 6, TagName: 'AI' })
     , new Tag({ Id: 7, TagName: 'Mesh' })
     , new Tag({ Id: 8, TagName: 'HoloLens' })
-    , new Tag({ Id: 9, TagName: 'Test' })
     , new Tag( { Id: 10, TagName: 'Docker' })
     , new Tag( { Id: 11, TagName: 'Infrastructure' })
     , new Tag( { Id: 12, TagName: 'Operations' })
