@@ -1,0 +1,85 @@
+<p>We know that customers strive for improving their operational efficiency. Today, we discuss Docker, a tool to build containerized applications. We outline its numerous advantages.</p>
+
+<h6 class="alt-font text-center">What is Docker?</h6>
+
+<p>Docker is a platform that allows developers to containerize their applications by bundling code and dependencies in a container. Developers and operations personnel can easily share, deploy, and monitor containerized apps – the host just needs to have the container runtime installed.</p>
+
+<p>In practice, developers have multiple tools at their disposal to develop containerized applications. Visual Studio 2019 even automatically generates a Dockerfile to containerize .NET applications, if that option is selected when creating the project.</p>
+
+<p><img src="/assets/images/docker-post/dockerfile-screenshot.png" alt="This image presents an excerpt of a Dockerfile produced by Visual Studio 2019." title="Visual Studio Dockerfile" class="images-center-justified" /></p>
+
+<p>Just using a common development tool – Visual Studio 2019 – reveals the workflow of containers:</p>
+
+<ul class="list-style-02 margin-20px-bottom text-left">
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>Start with a base container <em><i>image</i></em> (the “template” of the container; the Microsoft ASP.NET image in the Dockerfile above)</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>Bundle app code and dependencies with the image (copying app source code and restoring packages from the <i>.csproj</i> manifest)</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>Produce a new image using Docker (invoking the <i>docker build</i> command)</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>Create a container from the new image (using the <i>docker run</i> command)</span>
+    </li>
+</ul>
+
+<h6 class="alt-font text-center">The Power of Containerization</h6>
+
+<p>We touched the surface of containerization, and there are certainly more nuances to this concept.</p>
+
+<ul class="list-style-02 margin-20px-bottom text-left">
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>To store and share images, developers use <em><i>container registries</i></em>, like Docker Hub or Azure Container Registry.</span>
+    </li>
+    <li >
+        <!-- Add nested bullets here (see doc) -->
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>To deploy containers, there are a plethora of deployment options, just on the Microsoft stack, such as Azure Container Instances, Azure Kubernetes Service, and Azure App Service.</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>There are opportunities to automate the image build and release process using CI/CD tools, such as GitHub Actions. At Hessatec, we use GitHub Actions to automate the deployment of .NET applications for Singularity.</span>
+    </li>
+</ul>
+
+<p>Here are more key benefits to consider when architecting your application using containers:</p>
+
+<ul class="list-style-02 margin-20px-bottom text-left">
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span><b>Efficiency.</b> Developers have complete control over the layout of their containers. Operations personnel simply deploy containers without needing to consider how the container is configured on the inside; the container must simply render its services.</span>
+    </li>
+    <li >
+        <!-- Add nested bullets here -->
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span><b>Flexible deployment options.</b> Perhaps you have heard of Kubernetes. In simple terms, Kubernetes orchestrates the deployment of containers to provide highly available, scalable services. As YAML files define Kubernetes resources, teams can version them. Does your current infrastructure setup allow you to visualize your configuration one month ago? One year ago?</span>
+    </li>
+</ul>
+
+<h6 class="alt-font text-center">Want to learn more?</h6>
+
+<p>Here are multiple resources we find useful to study containerization in real-world scenarios:</p>
+
+<ul class="list-style-02 margin-20px-bottom text-left">
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span><a href="https://github.com/microsoft/MCW-Cloud-native-applications"><strong>MCW Cloud Native Applications.</strong></a> This resource details how to containerize an Angular and Node.js application; migrate a MongoDB database to Azure Cosmos DB; orchestrate the containerized application using Kubernetes; and configure GitHub Actions.</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span><a href="https://docs.docker.com/"><strong>Docker documentation.</strong></a></span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span><a href="https://github.com/robrich/kubernetes-hands-on-workshop"><strong>Kubernetes Hands-On Workshop.</strong></a> Presented during his Microsoft Azure + AI Conference workshop in June 2021, this excellent resource from Rob Richardson describes containerizing an app, deploying the app to Kubernetes, and following best practices along the way.</span>
+    </li>
+</ul>
+
+<p>Interested? Reach out to Hessatec to understand how our technological expertise benefits our clients.</p>

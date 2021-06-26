@@ -1,4 +1,4 @@
-﻿
+
 
     <base href="/" />
 
@@ -47,7 +47,7 @@
     <link href="/css/final.css" rel="stylesheet" />
     
     <script>
-        postId = 1;
+        postId = 4;
     </script>
     <script src="/Angular/angular.min.js"></script>
     <script>
@@ -136,7 +136,7 @@
 
     <section class="blog-right-side-bar">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-12 col-lg-12 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom">
                     <div class="col-12 blog-post-content overflow-hidden text-center p-0 margin-4-half-rem-bottom wow animate__fadeIn">
                         <div class="blog-image"><a href="/Post/{{p.Id}}"><img ng-src="/img/BlogImages/{{p.Image}}" alt="{{p.Title}}" /></a></div>
@@ -147,7 +147,7 @@
                                 </div>
                                 <h6 class="alt-font font-weight-500"><a href="/Post/{{p.Id}}" class="text-extra-dark-gray text-fast-blue-hover">{{p.Title}}</a></h6>
 
-                                <div id="fullPost" class=" text-left"></div>
+                                <div id="fullPost"></div>
 
                                 <div class="col-12 col-md-9 text-center text-md-left sm-margin-10px-bottom px-0">
                                     <div class="tag-cloud">
