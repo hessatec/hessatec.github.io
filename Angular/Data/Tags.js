@@ -10,5 +10,6 @@
     , new Tag( { Id: 10, TagName: 'Docker' })
     , new Tag( { Id: 11, TagName: 'Infrastructure' })
     , new Tag( { Id: 12, TagName: 'Operations' })
+    , new Tag( { Id: 13, TagName: 'Serverless' })
 ];
 

@@ -1,0 +1,61 @@
+<p>In this blog post, the Hessatec team will explain the key features of Azure Functions through concrete examples.</p>
+
+<h6 class="alt-font text-center">Introduction</h6>
+
+<p>Azure Functions allow developers to deploy small pieces of code, known as “functions”, to the cloud. Like other Azure PaaS offerings, developers do not need to manage the underlying compute resources; they just publish their code, and it will be executed when a trigger is fired. Moreover, with the Consumption (Serverless) model, development teams are charged per-execution, an attractive proposition for modern applications.</p>
+
+<p>As you design your application, consider the following benefits of Azure Functions:</p>
+
+<ul class="list-style-02 margin-20px-bottom text-left">
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>Quick execution</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>Simple integration with other Azure resources through <em>bindings</em>. Our sample application leverages an Azure Blob Storage output binding</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>Pay-per-use pricing model (though there are other ways to host Azure Functions)</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>Flexible development – there are multiple tools available to develop, test, and deploy Azure Functions. We will use the Azure Portal</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span>Support for multiple platforms, including Java, JavaScript, Python, C#, and TypeScript</span>
+    </li>
+</ul>
+
+<h6 class="alt-font text-center">Deploy the Sample Resources</h6>
+
+<p>We provide an ARM template that mimics our deployment. Deploy the Azure Function app, and then consult the <em>run.csx</em> file and the <em>host.json</em> file in the <a href="https://github.com/hessatec/Demos/tree/main/02-functions-post/src"><strong>src/</strong></a> directory of the repository. <em>host.json</em> contains the trigger and binding details. <em>run.csx</em> contains the Function App Code, written in C# Script.</p>
+
+<p>
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhessatec%2FDemos%2Fmain%2F02-functions-post%2Farm%2Fazuredeploy.windows-function.json" target="_blank">
+        <img src="https://aka.ms/deploytoazurebutton"/>
+    </a>
+</p>
+
+<h6 class="alt-font text-center">Using Azure Functions</h6>
+
+<p>A trigger causes a function to run, and Azure provides many triggers suited to a variety of business needs. <strong>Functions must have exactly one trigger.</strong></p>
+
+<p><strong>Examples of Triggers:</strong></p>
+
+<ul class="list-style-02 margin-20px-bottom text-left">
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span><em>IoT Hub:</em> This trigger fires upon receiving an event from the Event Hub-compatible endpoint of Azure IoT Hub. For example, use the IoT Hub trigger to route data from IoT Hub to Azure Cosmos DB for querying. Note that Azure Stream Analytics can also do this</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span><em>Blob Storage:</em> An example from the Microsoft documentation shows how an image uploaded to a particular container can be resized to two different sizes, which are stored in two separate Blob Storage containers. This function has one Blob Storage trigger (for the raw image) and two output bindings (for the resized images)</span>
+    </li>
+    <li >
+        <i class="feather icon-feather-arrow-right-circle text-large text-fast-blue position-relative margin-10px-right" aria-hidden="true"></i>
+        <span><em>HTTP:</em> The trigger type we will demonstrate today. It is triggered by an HTTP request (of the appropriate method(s)) to the Function endpoint.</span>
+    </li>
+</ul>
