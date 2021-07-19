@@ -2,7 +2,9 @@
     $scope.init = function () {
         $scope.Categories = Categories;
         $scope.Tags = Tags;
-        $scope.AllPosts = Posts;
+        $scope.AllPosts = Posts.sort(function(a,b){
+            return new Date(b.PostedOn) - new Date(a.PostedOn);
+        });
 
         $scope.Categories.forEach(function (c) { c.TotalPosts = $scope.AllPosts.filter(p => p.CategoryId == c.Id).length });
 
