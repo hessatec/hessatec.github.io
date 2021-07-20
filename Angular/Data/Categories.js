@@ -3,4 +3,5 @@
     , new Category({ Id: 2, CategoryName: 'Microsoft'})
     , new Category({ Id: 3, CategoryName: 'Cloud Computing'})
     , new Category({ Id: 4, CategoryName: 'Business Intelligence'})
+    , new Category({ Id: 5, CategoryName: 'Integration' })
 ];

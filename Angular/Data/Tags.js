@@ -11,5 +11,8 @@
     , new Tag( { Id: 11, TagName: 'Infrastructure' })
     , new Tag( { Id: 12, TagName: 'Operations' })
     , new Tag( { Id: 13, TagName: 'Serverless' })
+    , new Tag( { Id: 14, TagName: 'Boomi' })
+    , new Tag( { Id: 15, TagName: 'Mulesoft' })
+    , new Tag( { Id: 16, TagName: 'Integration' })
 ];
 
